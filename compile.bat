@@ -1,0 +1,1 @@
+..\bin\cmake-3.31.6-windows-x86_64\bin\cmake.exe --build build -j 8

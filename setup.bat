@@ -1,21 +1,17 @@
-curl -L -o Tiled-1.11.2_Windows-10+_x86_64.msi https://github.com/mapeditor/tiled/releases/download/v1.11.2/Tiled-1.11.2_Windows-10+_x86_64.msi
-
 mkdir vego\bin
 mkdir vego\downloads
-mkdir vego\engine
 
-TODO add release download link for template release
+curl -L -o vego\Tiled-1.11.2.msi https://github.com/mapeditor/tiled/releases/download/v1.11.2/Tiled-1.11.2_Windows-10+_x86_64.msi
 
-curl -L -o vego\downloads\x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev2.7z https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev2/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev2.7z
-curl -L -o vego\downloads\cmake-4.0.0-rc4.zip https://github.com/Kitware/CMake/releases/download/v4.0.0-rc4/cmake-4.0.0-rc4.zip
+curl -L -o vego\downloads\mingw.7z https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev2/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev2.7z
+curl -L -o vego\downloads\cmake3.zip https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-windows-x86_64.zip
+curl -L -o vego\bin\git.exe https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/PortableGit-2.49.0-64-bit.7z.exe
+curl -L -o vego\bin\7zr.exe https://www.7-zip.org/a/7zr.exe
 
-7z >nul 2>&1
-IF ERRORLEVEL 1 (
-    echo 7z not found, downloading 7zr.exe...
-    curl -L -o vego\bin\7zr.exe https://www.7-zip.org/a/7zr.exe
-)
+vego\bin\7zr.exe x vego\downloads\mingw.7z -ovego\bin
+tar -xf vego\downloads\cmake3.zip -C vego\bin
 
-vego\bin\7zr.exe x vego\downloads\x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev2.7z -o vego\bin
-vego\bin\7zr.exe x vego\downloads\cmake-4.0.0-rc4.zip -o vego\bin
+vego\bin\PortableGit\bin\git.exe clone --recursive -j8 https://github.com/VEGO-Engine/Project_Template.git vego\my_game
+vego\bin\cmake-3.31.6-windows-x86_64\bin\cmake.exe -S vego\my_game -B vego\my_game\build -G "MinGW Makefiles" -DCXX_COMPILER=vego\bin\mingw64\bin\g++.exe
 
 echo Setup completed successfully!

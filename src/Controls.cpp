@@ -1,19 +1,18 @@
 #include "Controls.h"
 
 #include "GameInternal.h"
-#include "MusicAndSoundImplementation.h"
+#include "MusicAndSoundDeclaration.h"
 #include "SpriteComponent.h"
 #include "TextureEnumImplementation.h"
 #include "TransformComponent.h"
 #include "Entities.h"
-#include "ConsoleListener.h"
 #include <DataComponent.h>
 #include <InteractionEventdataStruct.h>
 #include <VEGO_Event.h>
 #include <VEGO.h>
 #include <Entity.h>
 
-void chickengame::Controls::initControls()
+void GAMESPACE::Controls::initControls()
 {
 	// using VEGO_Game().inputManager->registerAction() it is possible to assign buttons to actions
 	// it takes 4 parameters:
