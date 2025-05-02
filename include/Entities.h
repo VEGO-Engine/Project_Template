@@ -40,7 +40,7 @@ namespace GAMESPACE
         Entities& operator=(const Entities&) = delete;
 
         // to add new Entities define them here
-        // i.e. Entity* player1;
+        // i.e Entity* player1;
         // once here and implemented in the .cpp they are managed by the VEGO manager
     };
 }

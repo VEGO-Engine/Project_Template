@@ -7,16 +7,15 @@
 #include <AnimationHandler.h>
 
 namespace GAMESPACE::animations {
-    inline std::map<std::string, std::unique_ptr<Animation>> animationMap;
+    // declare animation maps here (it is recommended to create one map for every entities sprite sheet
+    // as the Sprite component needs to get the entire map of an entity passed to animate it, see Spritecomponent in the documentation)
+    // i.e. inline std::map<std::string, std::unique_ptr<Animation>> animationMap;
 
     inline void initialize()
     {
-        // In order to understand how to initialize animations it is important to understand how the library expects your spritesheet to be set up
-        // the spritesheet should be a grid of frames, each frame being the same size (32x32 is currently supported)
-        // the Animation map takes 2 parameters:
-        // the name of the animation, and a unique pointer to an Animation object which takes 3 parameters:
-        // the row of the spritesheet, the number of frames in that row, and the time it takes to animate through them in milliseconds
+        // Add animations to a map for each entities sprite sheet
+        // The first parameter is the name of the animation, the second is a unique pointer to the Animation object
         // i.e animationMap.emplace("IDLE", std::make_unique<Animation>(0, 2, 200));
-        // for further details with an example using a sprite sheet please refer to the VEGO documentation
+        // see also: Animation
     }
 }

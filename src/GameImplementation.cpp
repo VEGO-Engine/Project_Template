@@ -21,7 +21,7 @@
 #include "MusicAndSoundDeclaration.h"
 #include "Controls.h"
 
-vego::GameRegistryHelper<GAMESPACE::GameImplementation> registryHelper("GAMESPACE");
+vego::GameRegistryHelper<GAMESPACE::GameImplementation> registryHelper();
 
 void GAMESPACE::GameImplementation::init()
 {
@@ -51,16 +51,18 @@ std::optional<std::string> GAMESPACE::GameImplementation::setConfigFilePath() {
 
 void GAMESPACE::GameImplementation::loadTextures() {
 	// here textures and spritesheets are loaded into the texture manager
+	// using an enum (declared in TextureEnumImplementation.h) and the path to the texture
+	// this is done as enums are more efficient than strings (paths) when used in the libraries internal functions
+	// for readabilities sake it is placed in a separate file but since this is just an example template, do whatever you want :p
 	VEGO_Game().textureManager->addTextures({
-		//{Textures::charSelection, "assets/characterSelection.png"},
+		//{Textures::player, "assets/player.png"},
 		
 	});
-	std::cout << "Texture-Map created" << std::endl;
 }
 
 void GAMESPACE::GameImplementation::loadSoundEffects() {
+	// same as with the textures, but using MusicAndSoundDeclaration.h
 	VEGO_Game().soundManager->getInstance()->addSoundEffects({
 		//{SoundEffects::eggThrow, "assets/sound/throw_egg.wav"}
 	});
-	std::cout << "SoundEffects-Map created" << std::endl;
 }
