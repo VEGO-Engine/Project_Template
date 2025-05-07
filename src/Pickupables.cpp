@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-// declare effect functions here
+// define effect functions here
 // e.g. void MyGameNamespace::pickupables::speedEffect(Entity* entity);
 // you can either make it a permanent effect e.g gaining a permanent +1 to speed
 // or a temporary effect e.g. gaining a temporary +1 to speed for 5 seconds

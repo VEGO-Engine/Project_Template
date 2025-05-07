@@ -7,8 +7,7 @@
 
 namespace GAMESPACE::Controls
 {	
-	// using this function register controls for the game
-	// it is recommended to use lambdas for the actions as they are easier to read and understand
+	// using this function you can implement controls for the game
 	// see Controls.cpp
 	void initControls();
 };

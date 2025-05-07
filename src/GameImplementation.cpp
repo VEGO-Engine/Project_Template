@@ -24,8 +24,8 @@
 vego::GameRegistryHelper<GAMESPACE::GameImplementation> registryHelper();
 
 void GAMESPACE::GameImplementation::init()
-{
-	// it is highly recommended to keep all of these premade functions here
+{	// =====THIS IS THE STARTING POINT OF THE GAME=====
+	// It is highly recommended to keep all of these premade functions here
 	// as this is a central place for most assets associated with the game get loaded in
 	// especially the entities as making them a singleton has proven to work the smoothest in the current setup
 	loadTextures();
@@ -40,12 +40,12 @@ void GAMESPACE::GameImplementation::init()
 
 void GAMESPACE::GameImplementation::update(uint_fast16_t diffTime)
 {
-	// place things you want to be executed every frame here
+	// place things you want to be executed and updated every frame here
 }
 
 std::optional<std::string> GAMESPACE::GameImplementation::setConfigFilePath() {
 	// add your config file path here, a default one is given
-	// you can either add a new one and change the path or just modify the default one
+	// you can either add a new one and change the path or just modify the default one (mainConfig.json)
 	return std::optional<std::string>("./configs/mainConfig.json");
 }
 

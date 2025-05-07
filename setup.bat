@@ -12,7 +12,7 @@ vego\bin\7zr.exe x vego\downloads\mingw.7z -ovego\bin
 vego\bin\7zr.exe x vego\downloads\PortableGit.7z.exe -ovego\bin\git
 tar -xf vego\downloads\cmake3.zip -C vego\bin
 
-set PATH="%cd%\vego\bin\mingw64\bin;%cd%\vego\bin\mingw64\x86_64-w64-mingw32\bin"
+set PATH=%cd%\vego\bin\mingw64\bin;%cd%\vego\bin\mingw64\x86_64-w64-mingw32\bin
 
 vego\bin\git\bin\git.exe clone --recursive -j8 https://github.com/VEGO-Engine/Project_Template.git vego\my_game --shallow-submodules
 vego\bin\cmake-3.31.7-windows-x86_64\bin\cmake.exe -S vego\my_game -B vego\my_game\build -G "MinGW Makefiles"

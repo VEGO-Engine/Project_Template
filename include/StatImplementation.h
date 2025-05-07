@@ -4,5 +4,5 @@
 
 namespace GAMESPACE {
     // in this file you can define functions to initialize/add default data for entities
-    // e.g. player stats
+    // e.g. void addDefaultPlayerStats(Entity* player);
 } 

@@ -7,8 +7,7 @@
 namespace GAMESPACE {
     void Entities::initialize()
     {
-        // assign in Entities.h defined entities here using the VEGO manager
-        
+        // define entities declared in Entities.h here using the manager
         // i.e. this->player1 = &VEGO_Game().manager.addEntity();
 
         
@@ -16,8 +15,10 @@ namespace GAMESPACE {
         // after adding new entities they can be given components which grant them different functionalities
         // i.e. this->player1->addComponent<TransformComponent>(posx, posy, scale);
         
-        // for more detailed explanation of the functionality of each component check the VEGO documentation
+        // Explanations of the functionalities for each component can be found in the documentation
+
         // it is also at this point that the entities stats can be initialized
-        // do this after giving it a data component as you cannot initialize something that doesnt exist
+        // do this after adding a DataComponent to the entity as you cannot initialize something that doesnt exist
+        // see example in StatImplementation.h and StatImplementation.cpp
     }
 }

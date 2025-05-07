@@ -9,7 +9,7 @@
 namespace GAMESPACE::animations {
     // declare animation maps here (it is recommended to create one map for every entities sprite sheet
     // as the Sprite component needs to get the entire map of an entity passed to animate it, see Spritecomponent in the documentation)
-    // i.e. inline std::map<std::string, std::unique_ptr<Animation>> animationMap;
+    // e.g. inline std::map<std::string, std::unique_ptr<Animation>> animationMap;
 
     inline void initialize()
     {
