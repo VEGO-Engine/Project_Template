@@ -14,8 +14,8 @@ namespace GAMESPACE::animations {
     inline void initialize()
     {
         // Add animations to a map for each entities sprite sheet
-        // The first parameter is the name of the animation, the second is a unique pointer to the Animation object
+        // The first parameter is the name of the animation, the second is a unique pointer to the Animation struct 
         // i.e animationMap.emplace("IDLE", std::make_unique<Animation>(0, 2, 200));
-        // see also: Animation
+        // see also: documentation for Animation
     }
 }

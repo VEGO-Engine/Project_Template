@@ -1,8 +1,6 @@
 mkdir vego\bin
 mkdir vego\downloads
 
-curl -L -o vego\Tiled-1.11.2.msi https://github.com/mapeditor/tiled/releases/download/v1.11.2/Tiled-1.11.2_Windows-10+_x86_64.msi
-
 curl -L -o vego\downloads\mingw.7z https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev2/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev2.7z
 curl -L -o vego\downloads\cmake3.zip https://github.com/Kitware/CMake/releases/download/v3.31.7/cmake-3.31.7-windows-x86_64.zip
 curl -L -o vego\downloads\PortableGit.7z.exe https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/PortableGit-2.49.0-64-bit.7z.exe
