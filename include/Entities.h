@@ -14,30 +14,13 @@
 #include "DataComponent.h"
 #include "Animations.h"
 #include "SoundEffects.h"
-#include "StatImplementation.h"
 
 namespace GAMESPACE
 {
-    class GameImplementation;
-
     class Entities
     {
     public:
-        static Entities& getInstance()
-        {
-            static Entities instance;
-            return instance;
-        }
-
         void initialize();
-
-    private:
-        Entities() {}
-
-        ~Entities() {}
-
-        Entities(const Entities&) = delete;
-        Entities& operator=(const Entities&) = delete;
 
         // to add new Entities declare them here
         // i.e Entity* player1;

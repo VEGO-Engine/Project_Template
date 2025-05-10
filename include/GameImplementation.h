@@ -23,5 +23,6 @@ namespace GAMESPACE
 	private:
 		void loadTextures();
 		void loadSoundEffects();
+		Entities* entities = new Entities();
 	};
 };

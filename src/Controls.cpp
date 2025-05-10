@@ -12,17 +12,19 @@
 #include <VEGO.h>
 #include <Entity.h>
 
-void GAMESPACE::Controls::initControls()
+// This function gets called in GameImplementation.cpp in the init() function
+void GAMESPACE::Controls::initControls(/*Pass entities etc. you need access to here and in the .h*/)
 {
 	// using VEGO_Game().inputManager->registerAction() it is possible to assign buttons to actions
+
 	// e.g. 
-	// VEGO_Game().inputManager->registerAction("ButtonPress", {InputManager::Key::A, InputManager::Key::LEFT}, [](bool isKeyUp) {
+	// VEGO_Game().inputManager->registerAction("WalkLeft", {InputManager::Key::A, InputManager::Key::LEFT}, [](bool isKeyUp) {
 	// 	if (isKeyUp){
-	// 		std::cout << "Button was released!" << std::endl;
+	// 		std::cout << Walking was stopped << std::endl;
 	// 		return;
 	// 	}
-	//   std::cout << "Button was pressed!" << std::endl;
-	// }, "Gameplay");
-	// if actions need access to resources such as player data, pass it accordingly to the initControls function
-	// and capture it correctly in the lambdas if you choose to use them
+	//   std::cout << Walking" << std::endl;
+	// });
+
+	// Dont forget to properly capture things in the lambda function
 }

@@ -1,6 +1,5 @@
 #include "GameImplementation.h"
 
-#include "Pickupables.h"
 #include "SDL3/SDL_render.h"
 #include "SDL3/SDL_surface.h"
 #include "Animations.h"
@@ -25,17 +24,14 @@ vego::GameRegistryHelper<GAMESPACE::GameImplementation> registryHelper();
 
 void GAMESPACE::GameImplementation::init()
 {	// =====THIS IS THE STARTING POINT OF THE GAME=====
-	// It is highly recommended to keep all of these premade functions here
-	// as this is a central place for most assets associated with the game get loaded in
-	// especially the entities as making them a singleton has proven to work the smoothest in the current setup
 	loadTextures();
 	loadSoundEffects();
 
 	Map map(""/*insert filepath to .tmx file containing your map here*/);
 	map.generateTiles();
-	Controls::initControls();
+	this->entities->initialize();
 	GAMESPACE::animations::initialize();
-	Entities::getInstance().initialize();
+	Controls::initControls();
 }
 
 void GAMESPACE::GameImplementation::update(uint_fast16_t diffTime)
@@ -51,9 +47,8 @@ std::optional<std::string> GAMESPACE::GameImplementation::setConfigFilePath() {
 
 void GAMESPACE::GameImplementation::loadTextures() {
 	// here textures and spritesheets are loaded into the texture manager
-	// using an enum (declared in TextureEnumImplementation.h) and the path to the texture
+	// using an enum (declared in TextureEnumImplementation.h for readability) and the path to the texture
 	// this is done as enums are more efficient than strings (paths) when used in the libraries internal functions
-	// for readabilities sake it is placed in a separate file but since this is just an example template, do whatever you want :p
 	VEGO_Game().textureManager->addTextures({
 		//{Textures::player, "assets/player.png"},
 		

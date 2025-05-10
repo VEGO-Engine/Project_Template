@@ -7,7 +7,7 @@
 
 namespace GAMESPACE::Controls
 {	
-	// using this function you can implement controls for the game
-	// see Controls.cpp
+	// using this function you can implement controls for the game in the init() function of GameImplementation.cpp
+	// see also Controls.cpp
 	void initControls();
 };
