@@ -1,10 +1,11 @@
 #!/bin/bash
+set -e
 
 mkdir vego/
 cd vego
 
 mkdir downloads/
-mkdir tmp/
+mkdir bin/
 
 curl -L 'https://github.com/adonis0147/devel-env/releases/download/v2025.04/install_toolchain_x86_64.sh' -o downloads/install_toolchain_x86_64.sh
 curl -L 'https://github.com/Kitware/CMake/releases/download/v3.31.7/cmake-3.31.7-linux-x86_64.tar.gz' -o downloads/cmake-3.31.7-linux-x86_64.tar.gz
@@ -23,4 +24,5 @@ mkdir my_game
 tar -xzf downloads/vego_template.tar.gz -C my_game --strip-components 1
 cmake -S my_game -B my_game/build
 
-echo "Setup completed successfully!"
+echo -n "Press any key to continue..."
+read 

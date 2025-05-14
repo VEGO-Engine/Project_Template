@@ -19,5 +19,7 @@ namespace GAMESPACE {
         // it is also at this point that the entities stats can be initialized
         // do this after adding a DataComponent to the entity as you cannot initialize something that doesnt exist
         // e.g. player1->getComponent<DataComponent>().setEntry("fireCooldown", 1000);
+        // e.g. player1->getComponent<DataComponent>().setEntry("playerName", "ThisIsAName");
+        // e.g. player1->getComponent<DataComponent>().setEntry("hasAnItem", True);
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32" tilecount="10" columns="10">
-  <image source="../../../3.Semester/INNO1/assets/MapNew-Sheet.png" width="320" height="32"/>
+  <image source="grassy-river-tiles.png" width="320" height="32"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" width="25" height="20">
   <properties>

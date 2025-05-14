@@ -20,7 +20,7 @@
 #include "MusicAndSoundDeclaration.h"
 #include "Controls.h"
 
-vego::GameRegistryHelper<GAMESPACE::GameImplementation> registryHelper();
+vego::GameRegistryHelper<GAMESPACE::GameImplementation> registryHelper("game");
 
 void GAMESPACE::GameImplementation::init()
 {	// =====THIS IS THE STARTING POINT OF THE GAME=====
