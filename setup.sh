@@ -14,7 +14,6 @@ curl -L 'https://github.com/VEGO-Engine/Project_Template/releases/download/0.2.x
 bash downloads/install_toolchain_x86_64.sh bin/
 
 export PATH="$(pwd)/bin/compiler/bin:${PATH}"
-export LD_LIBRARY_PATH=$(pwd)/bin/compiler/lib:$LD_LIBRARY_PATH
 
 tar -xzf downloads/cmake-3.31.7-linux-x86_64.tar.gz -C bin/
 
